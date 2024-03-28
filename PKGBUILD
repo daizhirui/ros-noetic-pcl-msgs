@@ -7,7 +7,7 @@ pkgname='ros-noetic-pcl-msgs'
 pkgver='0.3.0'
 _pkgver_patch=0
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(ros-noetic-catkin
@@ -29,9 +29,10 @@ depends=(${ros_depends[@]})
 # sha256sums=('SKIP')
 
 # Tarball version (faster download)
-_dir="pcl_msgs-${pkgver}/"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-perception/pcl_msgs/archive/${pkgver}.tar.gz")
-sha256sums=('da607cfbdccf2a3a8a8e68be1fe6aee997e8bd52eddfac0644fd720c5ef76314')
+_commit="89b072539778246218e94b608f9f294987bb6d0a"
+_dir="pcl_msgs-${_commit}/"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-perception/pcl_msgs/archive/${_commit}.tar.gz")
+sha256sums=('eaf3f1c1bffaf248bf339b47c6d9584aeac60f62d65454f4f86a76094ae7f1ed')
 
 build() {
   # Use ROS environment variables
